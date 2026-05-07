@@ -6,9 +6,11 @@ fruta_favorita = input("Qual sua fruta favorita?: ")
 
 # SE a fruta favorita NÃO ESTÁ NA lista frutas
 if fruta_favorita not in frutas:
-    # Faça isso (exibir mensagem e sai do sistema):
+    # Faça isso (exibir mensagem e adiciona na lista):
     print("Sua fruta favorita não está na lista!")
-    exit()
+    print("Adicionando...")
+    frutas.append(fruta_favorita)
+
 
 # PARA cada posição (índice) e fruta NA lista numerada de frutas
 for posicao, fruta in enumerate(frutas):
