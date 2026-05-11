@@ -3,7 +3,6 @@ frutas = ["manga", "banana", "abacaxi", "laranja", "uva"]
 
 # Entrada do usuário pedindo para digitar nome da fruta favorita
 fruta_favorita = input("Qual sua fruta favorita?: ")
-
 # SE a fruta favorita NÃO ESTÁ NA lista frutas
 if fruta_favorita not in frutas:
     # Faça isso (exibir mensagem e adiciona na lista):
