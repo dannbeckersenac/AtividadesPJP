@@ -1,6 +1,7 @@
 produtos = ["camiseta", "calça", "par meias", "boné", "touca"]
 precos = [40.00, 80.00, 15.00, 20.00, 20.00]
 
+
 print(produtos)
 print(produtos[0])
 print(produtos[-1])

@@ -19,7 +19,7 @@ for posicao, fruta in enumerate(frutas):
         # Salva numa nova variável a posição dessa iteração
         posicao_fruta_favorita = posicao
         # Quebra o for (faz ele parar)
-        break 
+        
 
 # Saída do algoritmo (print)
 print(f"Minha fruta favorita está na posição índice {posicao_fruta_favorita}")
