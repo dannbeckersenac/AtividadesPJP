@@ -1,0 +1,11 @@
+compras = []
+
+compras.append("arroz")
+compras.append("feijão")
+compras.append("ovos")
+print(compras)
+
+compras.remove("feijão")
+print(compras)
+
+print(len(compras))
