@@ -35,6 +35,7 @@ elif escolha_tipo == "Serviço":
 
 if preco_escolhido >= 300:
     preco_escolhido = round(preco_escolhido * 0.90, 2)
+    
 
 mensagem = f"""
 ===================================
