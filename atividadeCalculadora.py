@@ -1,3 +1,19 @@
+def somar(n1, n2):
+    total = n1 + n2
+    print(f"{n1} + {n2} = {total}")
+
+def subtrair(n1, n2):
+    total = n1 - n2
+    print(f"{n1} - {n2} = {total}")
+
+def multiplicar(n1, n2):
+    total = n1 * n2
+    print(f"{n1} x {n2} = {total}")
+
+def dividir(n1, n2):
+    if n2 == 0: print("Não é possível dividir por zero!")
+    else: print(f"{n1} / {n2} = {round(n1 / n2, 2)}")
+
 while True:
     menu = """
     ================================
@@ -23,18 +39,17 @@ while True:
     n1 = int(input("Digite o primeiro número: "))
     n2 = int(input("Digite o segundo número: "))
 
-    if opcao == "1":
-        total = n1 + n2
-        print(f"{n1} + {n2} = {total}")
-    elif opcao == "2":
-        total = n1 - n2
-        print(f"{n1} - {n2} = {total}")
-    elif opcao == "3":
-        total = n1 * n2
-        print(f"{n1} x {n2} = {total}")
-    elif opcao == "4":
-        if n2 == 0: print("Não é possível dividir por zero!")
-        else: print(f"{n1} / {n2} = {round(n1 / n2, 2)}")
+    if opcao == "1": somar(n1, n2) 
+    elif opcao == "2": subtrair(n1, n2)    
+    elif opcao == "3": multiplicar(n1, n2)   
+    elif opcao == "4": dividir(n1, n2)
+
      
     else:
         print("Opção Inválida!")   
+
+
+
+
+print("Somando fora do while...")
+somar(5, 5)
