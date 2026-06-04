@@ -24,9 +24,12 @@ def remover_tarefa(tarefas):
         print("Não há tarefas para remover!")
     else:
         tarefa = int(input("Digite o número da tarefa que deseja remover: "))
-        tarefa = tarefa - 1
-        tarefa_removida = tarefas.pop(tarefa)
-        print(f"Tarefa removida: {tarefa_removida}")
+        if tarefa > 0 and tarefa <= len(tarefas):
+            tarefa = tarefa - 1
+            tarefa_removida = tarefas.pop(tarefa)
+            print(f"Tarefa removida: {tarefa_removida}")
+        else:
+            print("Tarefa não existe, digite um número válido!")
 
 tarefas = []
 
