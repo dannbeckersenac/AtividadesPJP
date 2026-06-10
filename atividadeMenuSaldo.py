@@ -27,13 +27,11 @@ def sacar(saldo):
 def ver_saldo(saldo):
     print(f"Saldo atual: R${saldo}")
 
-
 saldo = 0.0
 while True:
     exibir_menu()
     opcao = input("Escolha uma opção: ")
 
-    # Faça os if/elif/else aqui!
     if opcao == "0":
         print("Encerrando o programa...")
         break
