@@ -1,5 +1,5 @@
 class Aluno:
-    def __init__(self, nome: str, notas: list = []):
+    def __init__(self, nome: str, notas: list):
         self.nome = nome
         self.notas = notas
     
@@ -16,8 +16,16 @@ class Aluno:
         ...
         # Aqui vocês vão fazer a lógica de somar:
         self.notas
+        if not self.notas:
+            print("Não foi possível ver a média pois não há notas lançadas.")
+            return
         # ... e fazer o cálculo da média.
+        media = sum(self.notas)  / len(self.notas)
         # por fim, dizer se está aprovado ou reprovado
+        if media >= 6:
+            print(f"Média: {media}. Aluno aprovado!")
+        else:
+            print(f"Média: {media}. Aluno reprovado!")
 
 def exibir_menu():
     print("\n====================")
@@ -31,17 +39,23 @@ def exibir_menu():
 # Opção 1
 def cadastrar_aluno():
     nome = input("Digite o nome do aluno: ")
-    aluno = Aluno(nome)
+    aluno = Aluno(nome, [])
     alunos.append(aluno)
     print(f"Aluno {nome} cadastrado com sucesso!")
 
 # Opção 2
 def lancar_nota():
-    indice = int(input("Digite o código do aluno: ")) - 1
-    aluno = alunos[indice] # Aluno("Daniel", [])
+    codigo_aluno = int(input("Digite o código do aluno: ")) - 1
+    aluno = alunos[codigo_aluno] # Aluno("Daniel", [])
     nota = float(input("Digite a nota para ser lançado: "))
     aluno.notas.append(nota)
     print(f"Nota {nota} lançada para o aluno {aluno.nome}")
+
+# Opção 3
+def ver_situacao():
+    codigo_aluno = int(input("Digite o código do aluno: ")) - 1
+    aluno = alunos[codigo_aluno] # Aluno("Daniel", [])
+    aluno.situacao()
 
 # Opção 4
 def listar_alunos():
@@ -66,7 +80,7 @@ while True:
     elif opcao == "2":
         lancar_nota()
     elif opcao == "3":
-        ...
+        ver_situacao()
     elif opcao == "4":
         listar_alunos()
     else:
